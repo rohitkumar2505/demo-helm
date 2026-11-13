@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: lunch
-  nameSpace: default
+  nameSpace: prometheus
   labels:
     app: lunch
 spec:
