@@ -1,0 +1,12 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: lunch-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: lunch
+  ports:
+    - port: 80
+      targetPort: 80
