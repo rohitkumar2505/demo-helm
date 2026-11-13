@@ -1,0 +1,24 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lunch
+  labels:
+    app: lunch
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: lunch
+  template:
+    metadata:
+      labels:
+        app: lunch
+    spec:
+      containers:
+        - name: lunch
+          image: rohitkumar2505/lunch:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          
